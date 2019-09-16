@@ -4,5 +4,10 @@ shared:
 jobs:
     main:
         requires: [~pr, ~commit]
+        parameters:
+          _started_at: simple
+          user:
+              value: adong
+              description: User running build
         steps:
             - test: echo ok
